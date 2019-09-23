@@ -1,0 +1,2 @@
+require 'sikulix'
+include Sikulix
