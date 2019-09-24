@@ -19,3 +19,17 @@ def GenerarCompanyDomain(arregloCom)
     end
     return arreglo
 end
+
+def CreateFirstName()
+    return Faker::Name.first_name
+end
+
+def CreateLastName()
+    return Faker::Name.last_name
+end
+
+def CreateEmail(nombre)
+    return Faker::Internet.safe_email(name: nombre)
+end
+
+p CreateLastName()
