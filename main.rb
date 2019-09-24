@@ -60,11 +60,16 @@ def CreateCompany()
     sleep(1)
     type(@@arregloC[@@index])
     sleep(1)
-    while not exists(@@path+"company_equal.png")
+    while exists(@@path+"company_equal.png")
         mouseMove(@@path+"label_add_try_company.png")
         sleep(1)
-        mouseMove(0,12)
+        mouseMove(0,15)
         sleep(1)
+        mouseDown(Button.LEFT)
+        mouseUp(Button.LEFT)
+        sleep(1)
+        mouseDown(Button.LEFT)
+        mouseUp(Button.LEFT)
         mouseDown(Button.LEFT)
         mouseUp(Button.LEFT)
         sleep(2)
@@ -111,7 +116,7 @@ def TestMain()
             while @@index < @@arregloC.length
                 #call the method Create Company
                 CreateCompany()
-                @@index = @@index = 1
+                @@index = @@index + 1
             end
         else
             #in case of that false, throw message "the number should be greater that 0"
