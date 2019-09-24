@@ -32,4 +32,8 @@ def CreateEmail(nombre)
     return Faker::Internet.safe_email(name: nombre)
 end
 
+def CreateJob()
+    return Faker::Job.title
+end
+
 p CreateLastName()
